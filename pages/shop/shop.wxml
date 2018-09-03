@@ -15,7 +15,7 @@
       </view>
     </navigator>
     <view class="content-wrapper">
-      <block wx:for="{{liveList}}" wx:key="avid">
+      <block wx:for="{{liveList}}" wx:key="{{avid}}">
         <!-- 使用正在直播模板，传入当前循环对象item -->
         <template is="jiefItem2" data="{{...item}}"/>
       </block>
