@@ -66,3 +66,8 @@ openid 当用户登陆服务器会在服务器端看到openid 用与用户以后
 2018-9-3
 将跳蚤数据shop提取到一个文件shop-data.js内   
 调试成功  2018-9-3 16:18完成
+
+2018-9-4
+将mail和shop文件下的movie 文件夹删除
+准备将index文件下的数据提取到data文件下index-data.js下
+2018-9-4 14:41 完成数据提取 将其提取到index-data.js文件内 
