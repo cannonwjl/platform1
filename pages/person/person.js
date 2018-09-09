@@ -18,8 +18,15 @@ Page({
     console.log("onReady is start");
     new AV.Query(Todo).find().then(todos => this.setData({
       todos
-    }).catch(console.error));
+    }).catch(console.error),
+    
+     
+
+    );
+
+    console.log(this.data.draft)
   },
+  
   updateDraft: function({
     detail: {
       value
@@ -33,6 +40,7 @@ Page({
       draft: value
     });
     //注意这里帮定数据要一定月wxml 一样 否则输入框里的值回不来
+   
   },
   addTodo: function() {
     console.log('addTodo');
