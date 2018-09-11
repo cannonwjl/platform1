@@ -13,6 +13,7 @@ Page({
     res_data:'',
     draft: "",
     todos: [],
+    todo:''
 
   },
 
@@ -89,14 +90,20 @@ Page({
    },
 
   onLoad: function (options) {
-   
+    
     var Todo = AV.Object.extend('_File');
-    console.log("onReady is start");
-    var data_todo=new AV.Query(Todo).find().then(todos => this.setData({
+    console.log("onload is start");
+    var data_todo=new AV.Query(Todo).find().then(
+     // this.data.todos=todos,
+      todos => this.setData({
       todos
-    }).catch(console.error));
+    }).catch(console.error),
+    
+    );
 
-    console.log(data_todo);
+
+   
+    console.log(this.data.todos);
 
 
     // wx.request({
@@ -135,13 +142,18 @@ Page({
     //  this.setData({
     //    url:this.data.url
     //  })
+    // console.log("this is onReady");
+    // console.log(this.data.todos);
   },
 
   /**
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-  
+    // console.log("this is onShow");
+    // console.log(this.data.todos);
+    console.log(this.data.todos);
+
   },
 
   /**
