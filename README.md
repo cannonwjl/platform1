@@ -71,3 +71,13 @@ openid 当用户登陆服务器会在服务器端看到openid 用与用户以后
 将mail和shop文件下的movie 文件夹删除
 准备将index文件下的数据提取到data文件下index-data.js下
 2018-9-4 14:41 完成数据提取 将其提取到index-data.js文件内 
+
+2018-9-21 
+调试数据 能在mail.js界面是里打印出数组
+.then(todos =>(this.setData({todos,},
+                  console.log(todos)))
+
+注意：这里写法  以下是简化写法  只有一行时才这么写
+.then(todos => this.setData({ todos }))
+
+接下来将取快递内的界面加好图片

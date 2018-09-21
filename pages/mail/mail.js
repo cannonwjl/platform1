@@ -95,15 +95,21 @@ Page({
     console.log("onload is start");
     var data_todo=new AV.Query(Todo).find().then(
      // this.data.todos=todos,
-      todos => this.setData({
-      todos
-    }).catch(console.error),
+      todos =>(
+        this.setData({
+          todos,
+      } ,
+    // console.log(todos),
+     this.setData({
+       todos:todos
+     })
+        )
+    ).catch(console.error),
     
     );
-
-
+   //console.log(this.data.todos);
    
-    console.log(this.data.todos);
+    //console.log("this is data_todo"+ ...data_todo);
 
 
     // wx.request({
@@ -153,7 +159,7 @@ Page({
     // console.log("this is onShow");
     // console.log(this.data.todos);
     console.log(this.data.todos);
-
+  
   },
 
   /**
